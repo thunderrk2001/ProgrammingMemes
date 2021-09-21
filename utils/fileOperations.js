@@ -7,8 +7,8 @@ class files {
         let fileResponse = fs.readFileSync(fileName, "utf-8")
         return fileResponse
     }
-    writeFile(fileName, data) {
-        let fileResponse = fs.writeFileSync(fileName, data, "utf-8")
+    async writeFile(fileName, data) {
+        let fileResponse = await fs.writeFileSync(fileName, data, "utf-8")
         return fileResponse
     }
 }

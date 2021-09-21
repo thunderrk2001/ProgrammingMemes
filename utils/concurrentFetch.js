@@ -16,7 +16,7 @@ function fetchAndStore(urls, findData, json_file_path, isApi, idx) {
         }
         memesJson = JSON.stringify(memes)
         fs_obj.writeFile(json_file_path, memesJson)
-        console.log("DONE>>>>")
+
     })
 }
 module.exports = fetchAndStore

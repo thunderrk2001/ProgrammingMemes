@@ -6,13 +6,13 @@ const doScraping = require("../utils/scrap")
 const request = require("request-promise");
 async function start_scrap() {
     for (let i = 0; i < 2; i++) {
-        await fetchAndStore(scrapUrls[i], findData, json_file_scrap[i], false, i)
+        fetchAndStore(scrapUrls[i], findData, json_file_scrap[i], false, i)
     }
 }
 async function findData(url, i) {
     let html = await request(url)
     console.log(url)
     return doScraping[i](html)
-    l
+
 }
 module.exports = start_scrap
